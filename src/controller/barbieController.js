@@ -21,18 +21,19 @@ const getBarbieById = (req, res) => {
             sucess: false,
             message: `A barbie não existe!`
         });
-    }
+    } else {
 
         res.status(200).json ({
         total: barbie.length,
         barbie: barbie
     });
 }
+}
 
-const createBarbie = (req, res) => {
+const createBarbies = (req, res) => {
     const {nome, profissao, anoLancamento} = req.body;
 
-    if (!nome || !profissao ) {
+    if (!nome || !profissao) {
         return res.status(400).json ({
             sucess: false,
             menssage: "Nome e Profissão são obrigatorios"
@@ -40,17 +41,18 @@ const createBarbie = (req, res) => {
     }
 
     const novaBarbie = {
-        id: barbies.length +1,
+        id: barbies.length + 1,
         nome: nome, 
         profissao: profissao,
-        anoLancamento: parseInt(anoLancamento),
+        anoLancamento: parseInt(anoLancamento)
  
     }
 
     barbies.push(novaBarbie);
+
     res.status(201).json({
         sucess: true,
-        menssage: "Barbie cadastrada com sucesso!",
+        menssage: "Barbie criada com sucesso!",
         barbie: novaBarbie
     });
 }
@@ -88,4 +90,4 @@ const deleteBarbie = (req, res) => {
 
 
 
-export { getAllBarbies, getBarbieById, createBarbie, deleteBarbie};
+export { getAllBarbies, getBarbieById, createBarbies, deleteBarbie};

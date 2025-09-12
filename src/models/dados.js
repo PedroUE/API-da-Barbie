@@ -4,4 +4,4 @@ const barbies = [
   { id: 3, nome: "Barbie Programadora", profissao: "Desenvolvedora", anoLancamento: 2020 }
 ];
 
-export default {barbies};
+export default  { barbies };
