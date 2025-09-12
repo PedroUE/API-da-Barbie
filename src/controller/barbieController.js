@@ -50,7 +50,7 @@ const createBarbie = (req, res) => {
     barbies.push(novaBarbie);
     res.status(201).json({
         sucess: true,
-        menssage: "Barbie cadastrado com sucesso!",
+        menssage: "Barbie cadastrada com sucesso!",
         barbie: novaBarbie
     });
 }
@@ -78,7 +78,7 @@ const deleteBarbie = (req, res) => {
 
     const filterBarbie = barbies.filter(barbie => barbie.id !== id);
     
-    barbies.splice(0, barbies.length, ...barbiesFiltrados);
+    barbies.splice(0, barbies.length, ...filterBarbie);
 
     res.status(200).json ({
         sucess: true,
