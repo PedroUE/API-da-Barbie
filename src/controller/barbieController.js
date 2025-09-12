@@ -3,10 +3,10 @@ import  dados from "../models/dados.js";
 const {barbies} = dados;
 let resultado = barbies;    
 
-const getAllBarbie = (req, res) => {
+const getAllBarbies = (req, res) => {
     res.status(200).json ({
         total: resultado.length,
-        bruxos: resultado
+        barbies: resultado
     });
 } 
 
@@ -88,4 +88,4 @@ const deleteBarbie = (req, res) => {
 
 
 
-export { getAllBarbie, getBarbieById, createBarbie, deleteBarbie};
+export { getAllBarbies, getBarbieById, createBarbie, deleteBarbie};
