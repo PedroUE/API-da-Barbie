@@ -15,5 +15,5 @@ app.get('/', (req, res) => {
 app.use("/barbies", barbieRoutes);
 
 app.listen(serverPort, () => {
-  console.log(`🚀 Servidor Funcionando em: http://localhost:${serverPort}`);
+console.log(`🚀 Servidor Funcionando em: http://localhost:${serverPort}`);
 });

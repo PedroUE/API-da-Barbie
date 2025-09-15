@@ -60,8 +60,6 @@ const createBarbies = (req, res) => {
 const deleteBarbie = (req, res) => {
     const id = parseInt(req.params.id);
 
-    console.log(id)
-    
     if(isNaN(id)) {
         return res.status(400).json({
             sucess: false,
@@ -84,7 +82,7 @@ const deleteBarbie = (req, res) => {
 
     res.status(200).json ({
         sucess: true,
-        message: `A Barbie de id: ${id} foi removida     com sucesso!`
+        message: `A Barbie de id: ${id} foi removida com sucesso!`
     });
 }
 
