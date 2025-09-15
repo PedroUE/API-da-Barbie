@@ -22,12 +22,6 @@ const barbies = [
     nome: "Barbie Desenvolvedora de Jogos",
     profissao: "Desenvolvedora de Jogos",
     anoDeLancamento: 2016
-  },
-  {
-    "id": 5,
-    nome: "Barbie Cientista da Computação",
-    profissao: "Cientista da Computação",
-    anoDeLancamento: 2022
   }
 ]
 
