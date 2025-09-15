@@ -16,18 +16,18 @@ const getBarbieById = (req, res) => {
 
     const barbie = barbies.find(b => b.id === id);
 
-    if(barbie) {
+
+    if(!barbie) {
         res.status(404).json({
             sucess: false,
             message: `A barbie não existe!`
         });
-    } else {
+    }
 
         res.status(200).json ({
         total: barbie.length,
         barbie: barbie
     });
-}
 }
 
 const createBarbies = (req, res) => {
