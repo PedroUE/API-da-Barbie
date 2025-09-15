@@ -114,10 +114,9 @@ const updateBarbie = (req, res) => {
         ...(nome && {nome}),
         ...(profissao && {profissao}),
         ...(anoLancamento && {anoLancamento})
-
         
-    }:barbie
-        
+    }
+        :barbie
     )
 
     barbies.slice(0, barbies.length, ...barbieAtualizada);
